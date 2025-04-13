@@ -30,3 +30,10 @@ for _, group in ipairs(groups) do
   end
 end
 
+-- Override Editor Background Colour
+vim.api.nvim_set_hl(0, "Normal", { bg = "#272822" })
+vim.api.nvim_set_hl(0, "NormalNC",     { bg = "#272822" })
+vim.api.nvim_set_hl(0, "NormalFloat",  { bg = "#272822" })
+vim.api.nvim_set_hl(0, "SignColumn",   { bg = "#272822" })
+vim.api.nvim_set_hl(0, "VertSplit",    { bg = "#272822" })
+
