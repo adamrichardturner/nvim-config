@@ -1,0 +1,4 @@
+# Ignore plugin download folders
+/lazy-lock.json
+/lazy/
+

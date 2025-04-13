@@ -17,6 +17,16 @@ require("nvim-treesitter.configs").setup({
 })
 
 vim.cmd[[colorscheme monokai]]
+
+require("config.highlights")
+
+-- Remove italics globally (for common groups)
+vim.api.nvim_set_hl(0, "Comment", { italic = false })
+vim.api.nvim_set_hl(0, "Keyword", { italic = false })
+vim.api.nvim_set_hl(0, "Function", { italic = false })
+vim.api.nvim_set_hl(0, "Type", { italic = false })
+vim.api.nvim_set_hl(0, "Statement", { italic = false })
+
 vim.o.termguicolors = true
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
