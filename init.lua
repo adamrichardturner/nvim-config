@@ -21,6 +21,8 @@ vim.cmd[[colorscheme monokai]]
 
 require("config.highlights")
 
+require("config.statusline")
+
 -- Remove italics globally (for common groups)
 vim.api.nvim_set_hl(0, "Comment", { italic = false })
 vim.api.nvim_set_hl(0, "Keyword", { italic = false })
