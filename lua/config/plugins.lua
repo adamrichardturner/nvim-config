@@ -1,0 +1,37 @@
+return {
+  -- Monokai theme
+  { "tanvirtin/monokai.nvim" },
+
+  -- File tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup()
+    end,
+  },
+
+  -- LSP
+  { "neovim/nvim-lspconfig" },
+
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
+
+  -- Autocompletion
+  { "hrsh7th/nvim-cmp" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "L3MON4D3/LuaSnip" },
+
+  -- Treesitter
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+  -- Telescope fuzzy finder
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
+}
+
