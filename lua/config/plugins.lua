@@ -13,11 +13,18 @@ return {
 
   -- LSP
   { "neovim/nvim-lspconfig" },
-
+  
+  -- TS Tools
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
+  },
+
+  -- None LS
+  {
+    "nvimtools/none-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
 
   -- Autocompletion

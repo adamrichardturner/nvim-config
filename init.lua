@@ -11,6 +11,7 @@ require("lazy").setup("config.plugins")
 
 require("config.lsp")
 require("config.cmp")
+require("config.formatter")
 require("nvim-treesitter.configs").setup({
   ensure_installed = { "typescript", "tsx", "lua", "json" },
   highlight = { enable = true },
