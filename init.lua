@@ -7,11 +7,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load Plugins
 require("lazy").setup("config.plugins")
-
-
+require("config.gitsigns")
 require("config.lsp")
 require("config.cmp")
 require("config.formatter")
+require("config.telescope")
+
 require("nvim-treesitter.configs").setup({
   ensure_installed = { "typescript", "tsx", "lua", "json" },
   highlight = { enable = true },
@@ -41,4 +42,11 @@ vim.api.nvim_create_autocmd("CursorHold", {
     vim.lsp.buf.hover()
   end,
 })
+
+-- Telescope Keybindings
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 

@@ -47,5 +47,11 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
+  -- Gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+
 }
 
